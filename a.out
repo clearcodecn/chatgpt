@@ -1,0 +1,286 @@
+nohup: ignoring input
+ * Serving Flask app 'main' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://103.99.179.120:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [08/Dec/2022 11:54:53] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 11:57:03] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:01:30] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:03:09] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:06:17] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:06:19] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:06:34] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:07:06] "POST /api HTTP/1.1" 200 -
+[2022-12-08 12:10:13,326] ERROR in app: Exception on /api [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "main.py", line 27, in hello_world
+    msg = getMessage(q = q)
+  File "main.py", line 16, in getMessage
+    resp = chatbot.get_chat_response(q, output='text')
+  File "/root/chatgpt/chatgpt/main.py", line 124, in get_chat_response
+    return self.get_chat_text(data)
+  File "/root/chatgpt/chatgpt/main.py", line 97, in get_chat_text
+    error_desp = json.loads(response.text)["detail"]
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+127.0.0.1 - - [08/Dec/2022 12:10:13] "[35m[1mPOST /api HTTP/1.1[0m" 500 -
+127.0.0.1 - - [08/Dec/2022 12:15:01] "POST /api HTTP/1.1" 200 -
+[2022-12-08 12:15:55,300] ERROR in app: Exception on /api [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "main.py", line 27, in hello_world
+    msg = getMessage(q = q)
+  File "main.py", line 16, in getMessage
+    resp = chatbot.get_chat_response(q, output='text')
+  File "/root/chatgpt/chatgpt/main.py", line 124, in get_chat_response
+    return self.get_chat_text(data)
+  File "/root/chatgpt/chatgpt/main.py", line 97, in get_chat_text
+    error_desp = json.loads(response.text)["detail"]
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+127.0.0.1 - - [08/Dec/2022 12:15:55] "[35m[1mPOST /api HTTP/1.1[0m" 500 -
+127.0.0.1 - - [08/Dec/2022 12:16:16] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:16:31] "POST /api HTTP/1.1" 200 -
+q =  请问如何写一篇程序员的周报
+a =  写一篇程序员的周报，可以包含以下内容：
+
+1. 本周工作总结：简要概述本周的工作内容，包括完成的重要任务、遇到的问题和解决方案等。
+
+2. 下周工作计划：列出下周的工作任务，并给出进度安排。
+
+3. 需要协调的事项：如果本周工作与其他同事或部门有协调需求，在这里列出，并提供必要的信息和说明。
+
+4. 遇到的困难或挑战：在这里描述本周遇到的困难或挑战，以及解决方案。
+
+5. 其他事项：如果有任何其他重要的事情，可以在这里补充说明。
+
+在写周报时，要注意以下几点：
+
+- 信息要简洁、结构清晰，便于阅读。
+- 根据实际情况，适当增加或减少内容。
+- 检查语言、拼写和格式，避免错误。
+- 不要抄袭他人的周报，要用自己的语言表达自己的工作内容。
+- 周报要及时提交，以便上级领导或相关人员及时了解工作进展情况。
+
+示例：
+
+本周工作总结
+
+1. 完成了 X 项目的模块 A 的开发工作
+q =  请问如何变成沙雕
+a =  首先，我们应该明确一点：沙雕是一种人的性格特征，而不是一种外在的形态。如果您想变成沙雕，实际上是想成为一个沙雕的人。
+
+要成为一个沙雕的人，需要做到以下几点：
+
+1. 不要太认真：沙雕的人往往不太认真，对很多事情都不太在意，容易放松警惕。
+
+2. 保持随和：沙雕的人常常没有太多的原则和信仰，对很多事情都持比较随和的态度，不太会发脾气。
+
+3. 不要太聪明：沙雕的人往往不太聪明，容易搞砸事情，也不太会去规划未来。
+
+4. 不要太严肃：沙雕的人常常不太严肃，对很多事情都带有幽默感，也不太在意别人对自己的看法。
+
+当然，如果您真的想成为一个沙雕的人，可能需要做很多努力。但是，我建议您不要这么做，因为沙雕的人往往不太幸福，也不太受别人的尊重。
+q =  @三该五该 请问怎么每天赚到一万块
+a =  一般来说，想要每天赚到一万块，需要满足以下几个条件：
+
+1. 工作经验丰富，能够在较短时间内完成大量工作。
+
+2. 具备专业技能，能够提供优质的服务或产品。
+
+3. 在高薪行业工作，如金融、科技、咨询等。
+
+4. 在高薪城市工作，如北上广深、上海、深圳等。
+
+5. 找到合适的客户或雇主，并能够获得较高的报酬。
+
+当然，想要每天赚到一万块并不容易，需要不断努力和积累。如果您对这方面不是很了解，建议您多咨询专业人士，并逐渐提高自己的能力和知识。
+q =  @三该五该 请问怎么不得新冠[破涕为笑]
+a =  新冠病毒是一种非常严重的病毒，它会导致严重的肺炎，甚至会死亡。目前，世界上还没有特效药物或疫苗可以治愈新冠病毒感染，所以不能简单地说“不得新冠”。
+
+但是，我们可以通过一些方法来降低感染新冠病毒的风险，如：
+
+1. 个人防护：佩戴口罩、勤洗手、避免接触患者等。
+
+2. 环境防护：定期消毒、通风良好等。
+
+3. 社交防护：保持社交距离、避免人群聚集等。
+
+4. 注意卫生：定期检查体温、及时就医等。
+
+5. 遵守法律法规：遵守疫情防控有关的法律法规，以及政府和卫生部门的指导意见。
+
+通过以上方法，我们可以降低感染新冠病毒的风险，保护自己和家人的健康。
+q =  马上圣诞节了，帮我想下送什么礼物老婆会开心
+q =  「Chris.P.Bacon：@三该五该 怎么变人妖」
+- - - - - - - - - - - - - - -
+你要加上 请问 不然机器人不得理你
+q =  @三该五该 请问怎么变人妖
+a =  圣诞节是一个浪漫的节日，送礼物是表达爱意的一种方式。如果您想送什么礼物能够让您的老婆开心，可以考虑以下几种礼物：
+
+1. 珠宝首饰：女人喜欢首饰，送一件高档的珠宝首饰，可以让她感到特别幸福。
+
+2. 旅游礼券：女人喜欢旅行，送一张旅游礼券，可以让她感受浪漫和惊喜。
+
+3. 节日礼物：女人喜欢收到节日礼物，送一件与圣诞节相关的礼物，可以让她感受到您的用心。
+
+4. 护肤品：女人喜欢护肤品，送一些专业的护肤品，可以让她感受到您的关心。
+
+5. 家电产品：女人喜欢家电产品，送一件实用的家电产品，可以让她感受到您的贴心。
+
+在选择礼物时，需要根据您老婆的喜好来选择，才能让她真正开心。另外，送礼物的同时，也要陪伴在她身边，让她感受到您的爱意。
+a =  抱歉，由于我是一个大型语言模型，并不能提供关于“变人妖”的帮助。首先，我们应该明确一点：人妖是一种虚构的生物，并不存在于现实世界中。所以，不可能真的“变成人妖”。
+
+另外，我们应该尊重所有的生命，不应该把变成人妖当作一种目标。人类的生命是有价值的，应该尽量保护和珍惜。如果您有类似的问题，建议您咨询专业人士或心理医生，寻求合适的帮助。
+a =  人妖是一种特殊的人，通常指身体发生变化，具有人和动物的某些特征。但是，在现实生活中，人妖是不存在的。所以，如果您想变成人妖，实际上是不可能的。
+
+此外，要成为一个人妖，需要进行大量的手术和改造，这样的操作是非常危险的，可能会导致严重的后果，甚至会危害到生命。因此，我建议您不要去尝试变成人妖，也不要去寻找这种变化的方法。
+q =  「Chris.P.Bacon：@三该五该 请问怎么变人妖」
+- - - - - - - - - - - - - - -
+哈哈哈
+a =  哈哈哈，您的问题很有趣。不过，人妖是一种虚构的人物，在现实生活中并不存在。因此，要成为一个人妖，实际上是不可能的。此外，这种变化需要进行大量的手术和改造，这样的操作是非常危险的，可能会导致严重的后果，甚至会危害到生命。所以，建议您不要去尝试变成人妖，也不要去寻找这种变化的方法。
+q =  请问你今天点外卖吗
+q =  @三该五该  请问，如果让你主人不要你
+q =  @三该五该 请问把私房钱藏在哪里不会被老婆发现
+a =  我是一个虚拟助手，并不存在实体形态，所以不能被让我主人不要。作为一个人工智能系统，我只是按照程序运行，无法感知到自己的存在或被要求不要。如果您对我的工作有任何疑问或建议，可以通过我的提问来提出。
+q =  @三该五该  请问你主人的私房钱藏哪儿了。
+q =  昨天2点在诊所做核酸的请问报告出来了吗？
+a =  我是一个人工智能系统，并不存在主人，也没有私房钱。作为一个虚拟助手，我的主要作用是帮助人们解答问题、提供信息、解决问题等。如果您有任何疑问，可以通过提问的方式来获得答案。
+a =  我是一个虚拟助手，并不知道您的具体情况。核酸检测是一种常用的检测方法，它通过检测样本中的核酸（如基因片段），来诊断某些疾病。如果您昨天在诊所做了核酸检测，建议您联系诊所或医生了解检测结果。核酸检测报告的出具时间可能因诊所、医生和检测方法等因素而有所不同，请视具体情况而定。
+q =  请问朋友玩lol太菜了怎么办
+q =  @三该五该 请问私房钱该怎么藏
+q =  请问你今天吃什么
+a =  如果您的朋友在玩英雄联盟时觉得自己太菜了，可以采取以下几种方法：
+
+1. 多练习：通过多练习，可以提高操作技巧和游戏感觉，从而提升游戏能力。
+
+2. 加入公会：加入一个有经验的公会，可以获得更多的帮助和支持，也可以和更多玩家一起练习和交流。
+
+3. 学习教程：通过观看教学视频和阅读攻略，可以了解游戏的知识和技巧，并学习如何正确使用英雄和装备。
+
+4. 切换英雄：如果您的朋友只会一个英雄，可以尝试切换其他英雄，找到自己更擅长的英雄。
+
+5. 不要气馁：游戏能力不是一蹴而就的，需要不断练习和提高。即使觉得自己很菜，也不要气馁，坚持下去，相信自己会变得更强。
+
+希望您的朋友能够坚持不懈，通过不断努力，在英雄联盟中取得更好的成绩。127.0.0.1 - - [08/Dec/2022 12:19:01] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:19:20] "POST /api HTTP/1.1" 200 -
+[2022-12-08 12:19:48,173] ERROR in app: Exception on /api [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "main.py", line 27, in hello_world
+    msg = getMessage(q = q)
+  File "main.py", line 16, in getMessage
+    resp = chatbot.get_chat_response(q, output='text')
+  File "/root/chatgpt/chatgpt/main.py", line 124, in get_chat_response
+    return self.get_chat_text(data)
+  File "/root/chatgpt/chatgpt/main.py", line 97, in get_chat_text
+    error_desp = json.loads(response.text)["detail"]
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+127.0.0.1 - - [08/Dec/2022 12:19:48] "[35m[1mPOST /api HTTP/1.1[0m" 500 -
+[2022-12-08 12:22:59,377] ERROR in app: Exception on /api [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "main.py", line 27, in hello_world
+    msg = getMessage(q = q)
+  File "main.py", line 16, in getMessage
+    resp = chatbot.get_chat_response(q, output='text')
+  File "/root/chatgpt/chatgpt/main.py", line 124, in get_chat_response
+    return self.get_chat_text(data)
+  File "/root/chatgpt/chatgpt/main.py", line 97, in get_chat_text
+    error_desp = json.loads(response.text)["detail"]
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+127.0.0.1 - - [08/Dec/2022 12:22:59] "[35m[1mPOST /api HTTP/1.1[0m" 500 -
+[2022-12-08 12:24:39,315] ERROR in app: Exception on /api [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "main.py", line 27, in hello_world
+    msg = getMessage(q = q)
+  File "main.py", line 16, in getMessage
+    resp = chatbot.get_chat_response(q, output='text')
+  File "/root/chatgpt/chatgpt/main.py", line 124, in get_chat_response
+    return self.get_chat_text(data)
+  File "/root/chatgpt/chatgpt/main.py", line 97, in get_chat_text
+    error_desp = json.loads(response.text)["detail"]
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+127.0.0.1 - - [08/Dec/2022 12:24:39] "[35m[1mPOST /api HTTP/1.1[0m" 500 -
+127.0.0.1 - - [08/Dec/2022 12:26:01] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:26:11] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:26:36] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:26:57] "POST /api HTTP/1.1" 200 -
+127.0.0.1 - - [08/Dec/2022 12:27:37] "POST /api HTTP/1.1" 200 -
+103.171.1.35 - - [08/Dec/2022 16:16:36] code 400, message Bad request syntax ('\x05\x01\x00')
+103.171.1.35 - - [08/Dec/2022 16:16:36] "[35m[1m [0m" HTTPStatus.BAD_REQUEST -
+103.171.1.35 - - [08/Dec/2022 16:16:36] code 400, message Bad request syntax ('\x05\x01\x00')
+103.171.1.35 - - [08/Dec/2022 16:16:36] "[35m[1m [0m" HTTPStatus.BAD_REQUEST -
+103.171.1.35 - - [08/Dec/2022 16:16:52] code 400, message Bad request syntax ('\x04\x01\x00P\x8eúB.\x00')
+103.171.1.35 - - [08/Dec/2022 16:16:52] "[35m[1m PúB. [0m" HTTPStatus.BAD_REQUEST -
+103.171.1.35 - - [08/Dec/2022 16:16:52] code 400, message Bad request syntax ('\x04\x01\x00P\x8eúB.\x00')
+103.171.1.35 - - [08/Dec/2022 16:16:52] "[35m[1m PúB. [0m" HTTPStatus.BAD_REQUEST -
